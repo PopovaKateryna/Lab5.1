@@ -13,7 +13,7 @@ int main()
 	cout << "g = "; cin >> g;
 	cout << "s = "; cin >> s;
 
-	double p = (h(g + 1, s) + pow(h(g, s + 1), 2)) / (1 + pow(h(pow(g, 2), pow(s, 2)), 3));
+	double p = (h(g + 1, s) + h(g, s + 1) * h(g, s + 1)) / (1 + h(g * g, s * s) * h(g * g, s * s) * h(g * g, s * s));
 	cout << "p = " << p << endl;
 
 	return 0;
